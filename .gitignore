@@ -1,0 +1,28 @@
+# Virtual environment
+.venv/
+venv/
+
+# Checkpoints — too large for GitHub (4.3GB)
+chemeleon/checkpoints/*.ckpt
+
+# Results — generated CIFs, not source code
+results/
+
+# Environment variables — never commit this
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Wandb logs
+wandb/
+
+# DS Store (Mac)
+.DS_Store
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+EOF
