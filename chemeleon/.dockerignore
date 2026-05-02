@@ -1,0 +1,24 @@
+# Don't copy these into the image — saves build time and space
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.git/
+.gitignore
+.github/
+*.egg-info/
+dist/
+build/
+.wandb/
+wandb/
+*.log
+Miniforge3.sh
+demo.ipynb
+sweep.py
+data/mp-40/
+
+# Results stay outside — mounted as volume
+results/
+
+# Don't double-copy checkpoints (handled explicitly in Dockerfile)
+# chemeleon/checkpoints/  ← DO NOT add this, we need it copied

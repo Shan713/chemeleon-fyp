@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  chemeleon:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: cathode-discovery:latest
+    container_name: chemeleon_pipeline
+    
+    # Pass MP API key from host environment
+    environment:
+      - MP_API_KEY=${MP_API_KEY}
+      - PYTHONUNBUFFERED=1
+    
+    # Mount results directory so CIFs persist outside container
+    volumes:
+      - ./results:/app/results
+      - ./data:/app/data
+    
+    # CPU only — no GPU config needed
+    deploy:
+      resources:
+        limits:
+          memory: 14G    # leave 2GB headroom on e2-standard-4
+          cpus: "3.5"
+    
+    # Keep container alive for exec commands
+    stdin_open: true
+    tty: true

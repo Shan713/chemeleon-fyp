@@ -1,0 +1,44 @@
+# folder
+.env
+__pycache__
+.ipynb_checkpoints
+.vscode
+.cache
+logs/
+wandb/
+tmp*
+*old*
+_experimental
+examples
+gnome/
+mp_gnome/
+artifacts/
+results*/
+figures/
+data/mp-50/
+data/mp-20/
+build/
+dist/
+
+# file formats
+*.egg-info
+*.pt
+*.tmp
+*.out
+*.err
+*.swp
+*.sh
+*.json
+*qsub*
+*.log
+*.cif
+*.ckpt
+*.zip
+*.slurm
+*.html
+dev*
+demo_*
+metrics*
+
+# files
+.DS_Store.env
